@@ -2,7 +2,7 @@
 
   <div data-role="header" data-position="inline">
     <%= link_to "Back", :action => :show, :id => @avhkey.object %>
-    <h1>Edit <%= @avhkey.name%></h1>
+    <h1>Edit <%= @avhkey.keyname%></h1>
     <%= link_to "Delete", :action => :delete, :id => @avhkey.object %>
   </div>
 
@@ -12,13 +12,13 @@
       <table>
           
           <tr>
-              <td class="itemLabel">Name: </td>
-              <td class="itemValue"><input type="text" name="avhkey[name]" value="<%= @avhkey.name %>"/></td>
+              <td class="itemLabel">Keyname: </td>
+              <td class="itemValue"><input type="text" name="avhkey[keyname]" value="<%= @avhkey.keyname %>"/></td>
           </tr>
           
           <tr>
-              <td class="itemLabel">Fltno: </td>
-              <td class="itemValue"><input type="text" name="avhkey[fltno]" value="<%= @avhkey.fltno %>"/></td>
+              <td class="itemLabel">Flts: </td>
+              <td class="itemValue"><input type="text" name="avhkey[flts]" value="<%= @avhkey.flts %>"/></td>
           </tr>
           
       </table>

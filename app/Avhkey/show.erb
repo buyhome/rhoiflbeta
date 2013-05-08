@@ -1,7 +1,7 @@
 <div data-role="page" data-add-back-btn="false">
 
   <div data-role="header" data-position="inline">
-    <h1><%= @avhkey.name %></h1>
+    <h1><%= @avhkey.keyname %></h1>
     <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
       Back
     </a>
@@ -14,13 +14,13 @@
     <ul data-role="listview">
       
           <li>
-            <div class="itemLabel">Name</div>
-            <div class="itemValue"><%= @avhkey.name %></div>
+            <div class="itemLabel">Keyname</div>
+            <div class="itemValue"><%= @avhkey.keyname %></div>
           </li>
       
           <li>
-            <div class="itemLabel">Fltno</div>
-            <div class="itemValue"><%= @avhkey.fltno %></div>
+            <div class="itemLabel">Flts</div>
+            <div class="itemValue"><%= @avhkey.flts %></div>
           </li>
       
     </ul>

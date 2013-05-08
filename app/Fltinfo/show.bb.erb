@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @fltinfo.fltno %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @fltinfo.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Fltno</td>
+        <td class="itemValue"><%= @fltinfo.fltno%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">SNumber</td>
+        <td class="itemValue"><%= @fltinfo.s_number%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Segments</td>
+        <td class="itemValue"><%= @fltinfo.segments%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

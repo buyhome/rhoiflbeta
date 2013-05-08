@@ -1,0 +1,39 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @bunkdata.object %>
+    <h1>Edit <%= @bunkdata.date%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @bunkdata.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @bunkdata.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Date: </td>
+              <td class="itemValue"><input type="text" name="bunkdata[date]" value="<%= @bunkdata.date %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Fltno: </td>
+              <td class="itemValue"><input type="text" name="bunkdata[fltno]" value="<%= @bunkdata.fltno %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Bunks: </td>
+              <td class="itemValue"><input type="text" name="bunkdata[bunks]" value="<%= @bunkdata.bunks %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Subclass: </td>
+              <td class="itemValue"><input type="text" name="bunkdata[subclass]" value="<%= @bunkdata.subclass %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

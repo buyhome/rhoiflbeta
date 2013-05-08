@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @bunkdata.date %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @bunkdata.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Date</td>
+        <td class="itemValue"><%= @bunkdata.date%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Fltno</td>
+        <td class="itemValue"><%= @bunkdata.fltno%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Bunks</td>
+        <td class="itemValue"><%= @bunkdata.bunks%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Subclass</td>
+        <td class="itemValue"><%= @bunkdata.subclass%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

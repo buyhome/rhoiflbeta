@@ -1,0 +1,39 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @bunkdata.date %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @bunkdata.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Date</div>
+            <div class="itemValue"><%= @bunkdata.date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Fltno</div>
+            <div class="itemValue"><%= @bunkdata.fltno %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Bunks</div>
+            <div class="itemValue"><%= @bunkdata.bunks %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Subclass</div>
+            <div class="itemValue"><%= @bunkdata.subclass %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @bunkdata.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @bunkdata.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="bunkdata[date]" class="fieldLabel">Date</label>
+            <input type="text" id="bunkdata[date]" name="bunkdata[date]" <%= placeholder("Date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bunkdata[fltno]" class="fieldLabel">Fltno</label>
+            <input type="text" id="bunkdata[fltno]" name="bunkdata[fltno]" <%= placeholder("Fltno") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bunkdata[bunks]" class="fieldLabel">Bunks</label>
+            <input type="text" id="bunkdata[bunks]" name="bunkdata[bunks]" <%= placeholder("Bunks") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bunkdata[subclass]" class="fieldLabel">Subclass</label>
+            <input type="text" id="bunkdata[subclass]" name="bunkdata[subclass]" <%= placeholder("Subclass") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Bunkdata</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @bunkdata.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Date: </td>
+                <td class="itemValue"><input type="text" name="bunkdata[date]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Fltno: </td>
+                <td class="itemValue"><input type="text" name="bunkdata[fltno]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Bunks: </td>
+                <td class="itemValue"><input type="text" name="bunkdata[bunks]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Subclass: </td>
+                <td class="itemValue"><input type="text" name="bunkdata[subclass]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

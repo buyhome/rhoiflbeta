@@ -1,7 +1,7 @@
 <div data-role="page">
 
   <div data-role="header" data-position="inline">
-    <h1>Edit <%= @avhkey.name %></h1>
+    <h1>Edit <%= @avhkey.keyname %></h1>
     <a href="<%= url_for :action => :show, :id => @avhkey.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
       Cancel
     </a>
@@ -15,13 +15,13 @@
       <input type="hidden" name="id" value="<%= @avhkey.object %>"/>
       
           <div data-role="fieldcontain">
-            <label for="avhkey[name]" class="fieldLabel">Name</label>
-            <input type="text" id="avhkey[name]" name="avhkey[name]" value="<%= @avhkey.name %>" <%= placeholder( "Name" ) %> />
+            <label for="avhkey[keyname]" class="fieldLabel">Keyname</label>
+            <input type="text" id="avhkey[keyname]" name="avhkey[keyname]" value="<%= @avhkey.keyname %>" <%= placeholder( "Keyname" ) %> />
           </div>
       
           <div data-role="fieldcontain">
-            <label for="avhkey[fltno]" class="fieldLabel">Fltno</label>
-            <input type="text" id="avhkey[fltno]" name="avhkey[fltno]" value="<%= @avhkey.fltno %>" <%= placeholder( "Fltno" ) %> />
+            <label for="avhkey[flts]" class="fieldLabel">Flts</label>
+            <input type="text" id="avhkey[flts]" name="avhkey[flts]" value="<%= @avhkey.flts %>" <%= placeholder( "Flts" ) %> />
           </div>
       
       <input type="submit" value="Update"/>
